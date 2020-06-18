@@ -1,0 +1,53 @@
+OrientDB Installation steps - https://orientdb.org/docs/3.1.x/fiveminute/java.html
+OrientDB URL - http://localhost:2480/studio/index.html
+
+A graph database that maps the relationship between individual users and their cars.
+
+CREATE CLASS Person EXTENDS V
+
+CREATE CLASS Car EXTENDS V
+
+CREATE CLASS Owns EXTENDS E
+
+CREATE VERTEX Person SET name = 'Dinesh'
+
+CREATE VERTEX Person SET name = 'Praveen'
+
+CREATE CLASS Friend EXTENDS E
+
+CREATE EDGE Friend FROM #19:0 TO #20:0
+
+CREATE VERTEX Car SET name = 'Ferrari Modena'
+
+CREATE VERTEX Car SET name = 'Rolls Royce'
+
+CREATE EDGE Owns FROM #19:0 TO #22:0
+
+CREATE EDGE Owns FROM #20:0 TO #23:0
+
+CREATE CLASS Country EXTENDS V
+
+CREATE CLASS Lives EXTENDS E
+
+CREATE VERTEX Country SET name='India'
+
+CREATE VERTEX Country SET name='America'
+
+CREATE EDGE Lives FROM #19:0 TO #31:0
+
+CREATE EDGE Lives FROM #20:0 TO #32:0
+
+CREATE CLASS Price EXTENDS V
+
+CREATE VERTEX Price SET name='$355,000'
+
+CREATE VERTEX Price SET name='$250,000'
+
+CREATE CLASS Costs EXTENDS E
+
+CREATE EDGE Costs FROM #20:0 TO #37:0
+CREATE EDGE Costs FROM #19:0 TO #38:0
+
+CREATE PROPERTY Owns.out LINK Person
+
+CREATE PROPERTY Owns.in LINK Car
