@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+psql -U postgres -h localhost -d easycar -f $HOME/dst-stu/src/2/view.sql 
+psql -U postgres -h localhost -d easycar -f $HOME/dst-stu/src/2/free.sql 
+psql -U postgres -h localhost -d easycar -f $HOME/dst-stu/src/2/rent.sql 

@@ -1,0 +1,7 @@
+
+#!/usr/bin/env bash
+
+psql -U postgres -h localhost -d easycar <<EOF 
+CREATE USER easycar WITH PASSWORD 'easycar';
+
+EOF

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+psql -U postgres -h localhost -d easycar <<EOF 
+\COPY client (firstName,lastName,gender,birthday) FROM '$HOME/dst-stu/d/easycar-clients.csv' DELIMITER ';' CSV HEADER;
+
+SELECT * FROM client
+
+EOF

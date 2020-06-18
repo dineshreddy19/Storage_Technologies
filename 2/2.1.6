@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+psql -U postgres -h localhost -d easycar <<EOF
+
+GRANT ALL ON DATABASE easycar TO easycar;
+
+EOF
